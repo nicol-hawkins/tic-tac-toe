@@ -78,8 +78,7 @@ body {
 .board.circle .cell:not(.x):not(.circle):hover::before {
     content: '';
     width: calc(var(--mark-size) * .15);
-    height: var(--mark-size);
-   
+    height: var(--mark-size);  
     position: absolute;
 }
 
@@ -116,4 +115,33 @@ body {
     width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
     background-color: white;
+}
+
+
+.winning-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+}
+
+.winning-message button {
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+}
+
+.winning-message button:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
 }
